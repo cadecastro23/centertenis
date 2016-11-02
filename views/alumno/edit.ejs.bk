@@ -1,0 +1,17 @@
+<div class="container panel">
+  <h1> Editando Alumno </h1>
+  <form action="/alumno/update/<%= alumno.id %>" method="POST" >
+
+    <input type="text" placeholder="Nombres" name="nombre" value="<%= alumno.nombre %>"><br />
+    <input type="text" placeholder="Apellidos" name="apellido" value="<%= alumno.apellido %>"><br />
+    <input type="text" placeholder="Email" name="email" value="<%= alumno.email %>"><br />
+    <input type="text" placeholder="Cedula" name="cedula" value="<%= alumno.cedula %>"><br />
+    <input type="text" placeholder="Sexo" name="sexo" value="<%= alumno.sexo %>"><br />
+    <input type="text" placeholder="Telefono" name="telefono" value="<%= alumno.telefono %>"><br />
+    <input type="text" placeholder="Fecha de Nacimiento" name="nacimiento" value="<%= alumno.nacimiento %>"><br />
+
+    <input type="submit" value="Editar Alumno" >
+  </form>
+
+  <a href="/alumno">Back</a>
+</div>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+
+    .navbar.navbar-default {
+      background-color: #54397E;
+      font-weight: 200;
+    }
+    #colophon {
+      background-color: #54397E;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+    .site-info a {
+      color: #eee;
+    }
+    .panel {
+      min-height: 420px;
+    }
+    .navbar-default .navbar-nav > li > a {
+      color: #fff !important;
+    }
+  </style>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <title><%- title %></title>
+
+  <!-- Viewport mobile tag for sensible mobile support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- JavaScript and stylesheets from your assets folder are included here -->
+  <%- assets.css() %>
+  <%- assets.js() %>
+</head>
+
+<body>
+<div class="container header-area">
+  <header id="masthead" class="site-header col-sm-12" role="banner">
+    <div class="site-branding col-md-6">
+      <h1 class="site-title"><a href="/" rel="home">Aplicacion de Clases de Tenis</a></h1>
+      <h4 class="site-description">Administrador para la base de datos de las Clases de Tenis</h4>
+    </div>
+    <div class="social-header col-md-6">
+    </div>
+  </header><!-- #masthead -->
+</div>
+
+<nav class="navbar navbar-default site-info" role="navigation">
+  <div class="site-info container">
+    <div class="navbar-collapse">
+
+      <ul id="menu-bootstrap-demo" class="nav navbar-nav">
+        <li id="inicio" class="menu-item active"><a title="Inicio" href="/">Inicio</a></li>
+        <li id="alumnos" class="menu-item"><a title="Alumnos" href="/alumno">Alumnos</a></li>
+        <li id="profesores" class="menu-item"><a title="Profesores" href="/profesores">Profesores</a></li>
+        <li id="entrenamientos" class="menu-item"><a title="Entrenamientos" href="/entrenamientos">Entrenamientos</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right"><li></li></ul>
+    </div>
+  </div>
+</nav>
+
+<%- body %>
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info container">
+    <div class="row">
+      <nav role="navigation" class="col-md-6">
+        <ul id="menu-my-personal" class="nav footer-nav clearfix"><li id="menu-item-1663" class="menu-item"><a href="#">Sample Page</a></li>
+        </ul>
+      </nav>
+      <nav role="navigation" class="col-md-6">
+        <ul id="menu-my-personal" class="nav footer-nav clearfix"><li id="menu-item-1663" class="menu-item"><a href="#">Realizado por Ivan Arno</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+<!-- Templates from your view path are included here -->
+<%- assets.templateLibrary() %>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<div class="container panel">
+  <div class="panel-body">
+    <h1> Profesor </h1>
+    <div>Nombre: <%= profesor.nombre %> </div>
+    <div>Apellido: <%= profesor.apellido %> </div>
+    <div>Email: <%= profesor.email %> </div>
+    <div>Cedula: <%= profesor.cedula %> </div>
+    <div>Sexo: <%= profesor.sexo %> </div>
+    <div>Telefono: <%= profesor.telefono %> </div>
+    <div>Nacimiento: <%= profesor.nacimiento %> </div>
+
+
+    <a href="/profesor/edit/<%= profesor.id %>">Edit</a> |
+    <a href="/profesor">Back</a>
+  </div>
+</div>

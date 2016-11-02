@@ -1,0 +1,107 @@
+/**
+ * AlumnoController
+ *
+ * @description :: Server-side logic for managing alumnoes
+ * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
+ */
+
+var AlumnoController = {
+
+  index: function (req, res) {
+
+    Alumno.findAll(function(err, alumno){
+      if (err) return res.send(err, 500);
+
+      res.view({
+        model: alumno
+      });
+    });
+  },
+
+  'new': function(req,res) {
+    res.view();
+  },
+
+  create: function(req,res) {
+    var params = _.extend(req.query || {}, req.params || {}, req.body || {});
+
+    Alumno.create(params, function alumnoCreated (err, createdAlumno) {
+
+      if (err) return res.send(err,500);
+
+      res.redirect('/alumno/show/'+ createdAlumno.id);
+    });
+  },
+
+  show: function (req,res) {
+
+    var id = req.param('id')
+
+    if (!id) return res.send("No id specified.", 500);
+
+
+    Alumno.find(id, function alumnoFound(err, alumno) {
+      if(err) return res.sender(err,500);
+      if(!alumno) return res.send("Alumno "+id+" not found", 404);
+
+      res.view({
+        alumno:alumno
+      })
+    });
+  },
+
+  edit: function (req,res) {
+    var id = req.param('id');
+
+    if (!id) return res.send("No id specified.",500);
+
+    Alumno.find(id, function alumnoFound (err,alumno){
+      if (err) return res.send(err,500);
+      if (!alumno) return res.send("Alumno "+id+" not found.",404);
+
+      res.view({
+        alumno: alumno
+      })
+    });
+  },
+
+
+  update: function (req,res) {
+
+    var params = _.extend(req.query || {}, req.params || {}, req.body || {});
+    var id = params.id;
+
+    if (!id) return res.send("No id specified.",500);
+
+    Alumno.update(id, params, function alumnoUpdated(err, updatedAlumno) {
+      if (err) {
+        res.redirect('/alumno/edit');
+      }
+      if(!updatedAlumno) {
+        res.redirect('/alumno/edit');
+      }
+      res.redirect('/alumno/show/'+id);
+    });
+  },
+
+
+  destroy: function (req,res) {
+    var id = req.param('id');
+    if (!id) return res.send("No id specified.",500);
+
+    Alumno.find(id, function foundAlumno(err, alumno) {
+      if (err) return res.send(err,500);
+      if (!alumno) return res.send("No alumno with that id exists.",404);
+
+      Alumno.destroy(id, function AlumnoDestroyed(err) {
+        if (err) return res.send(err,500);
+
+        return res.redirect('/alumno');
+      });
+
+    })
+  }
+
+
+};
+module.exports = AlumnoController;

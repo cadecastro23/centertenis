@@ -1,0 +1,36 @@
+<div class="container panel">
+  <h1>Administrador de Profesores</h1>
+
+  <table class="table">
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Email</th>
+      <th>cedula</th>
+      <th>Sexo</th>
+      <th>Telefono</th>
+      <th>Fecha de nacimiento</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% _.each(profesor, function (profesor) { %>
+    <tr data-id="<%= profesor.id %>" data-model="profesor" >
+      <td><%= profesor.nombre %></td>
+      <td><%= profesor.apellido %></td>
+      <td><%= profesor.email %></td>
+      <td><%= profesor.cedula %></td>
+      <td><%= profesor.sexo %></td>
+      <td><%= profesor.telefono %></td>
+      <td><%= profesor.nacimiento %></td>
+      <td><a href="/profesor/show/<%= profesor.id %>">Show</a></td>
+      <td><a href="/profesor/edit/<%= profesor.id %>">Edit</a></td>
+      <td><a href="/profesor/destroy/<%= profesor.id %>">Delete</a></td>
+    </tr>
+    <% }) %>
+  </table>
+
+  <a href="/profesor/new">Nuevo profesor</a>
+
+</div>

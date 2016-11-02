@@ -1,0 +1,8 @@
+<h1><%= alumno.nombre %></h1>
+<h1><%= alumno.apellido %></h1>
+<hr>
+<h3>Email: <%= alumno.email %></h3>
+<h3>Cedula: <%= alumno.cedula %></h3>
+<h3>Sexo: <%= alumno.sexo %></h3>
+<h3>Telefono: <%= alumno.telefono %></h3>
+<h3>Nacimiento: <%= alumno.nacimiento %></h3>
