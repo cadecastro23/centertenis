@@ -46,7 +46,7 @@ module.exports = {
     //relacion entre profesor alumno
     alumnos: {
       collection: 'alumno',
-      via: 'entrena'
+      via: 'profesor_id'
     }
 
   }
