@@ -11,6 +11,19 @@ module.exports = {
     res.view();
   }, //se coloca una coma para decirle a node que viene otro metodo
 
+/*
+'new': function(req, res, err) {
+  Profesor.findOne(req.param('entrenado'), function foundProfesor (err, profesor) {
+    if (err) return next(err);
+    if (!profesor) return next();
+    res.view({
+      profesor: profesor
+    });
+  });
+},*/
+
+
+
   //creando un alumno en la bd y pasando esa informacion al proximo metodo
    create: function(req, res, next) {
      Alumno.create( req.params.all(), function alumnoCreated(err, alumno) {

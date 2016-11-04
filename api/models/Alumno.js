@@ -44,7 +44,8 @@ module.exports = {
 
     //relacion entre profesor alumno
     entrenado: {
-      model:'profesor'
+      model:'profesor',
+      required: true
     }
 
   }

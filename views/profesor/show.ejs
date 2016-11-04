@@ -9,8 +9,34 @@
     <div>Telefono: <%= profesor.telefono %> </div>
     <div>Nacimiento: <%= profesor.nacimiento %> </div>
 
+<h3>Alumnos</h3>
+
+<table class="table">
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <% _.each(profesor.alumnos, function(alumno) { %>
+    <tr data-id="<%= alumno.id %>" data-model="alumno" >
+        <td><%= alumno.nombre %></td>
+        <td><%= alumno.apellido %></td>
+        <td></td>
+    </tr>
+    <% }); %>
+</table>
 
     <a href="/profesor/edit/<%= profesor.id %>">Edit</a> |
     <a href="/profesor">Back</a>
   </div>
 </div>
+
+
+<!--
+<form action="/alumno/new" method="POST" >
+    <input type="hidden" value="<% profesor.id %>" name="entrenado">
+    <input type="submit" value="Add Alumno" />
+</form>
+/>-->

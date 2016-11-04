@@ -21,7 +21,7 @@ module.exports = {
   },
 
   show: function (req, res, next) {
-    Profesor.findOne(req.param('id'), function foundProfesor(err, profesor) {
+    Profesor.findOne(req.param('id')).populateAll().exec( function(err, profesor) {
       if (err) return next(err);
       if (!profesor) return next();
       res.view({
