@@ -7,6 +7,8 @@
 
 module.exports = {
 
+connection:'MysqlProyecto',
+
   attributes: {
     nombre: {
       type: 'string',
