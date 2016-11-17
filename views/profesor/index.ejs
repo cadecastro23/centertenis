@@ -3,6 +3,7 @@
 
   <table class="table">
     <tr>
+      <th>ID</th>
       <th>Nombre</th>
       <th>Apellido</th>
       <th>Email</th>
@@ -17,6 +18,7 @@
 
     <% _.each(profesor, function (profesor) { %>
     <tr data-id="<%= profesor.id %>" data-model="profesor" >
+    <td><%= profesor.id %></td>
       <td><%= profesor.nombre %></td>
       <td><%= profesor.apellido %></td>
       <td><%= profesor.email %></td>

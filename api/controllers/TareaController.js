@@ -21,7 +21,7 @@ module.exports = {
     Tarea.query('SELECT first_name FROM actor', function(err, tarea) {
       if (err) return res.serverError(err);
       
-      /*return res.json(tarea);*/
+      return res.json(tarea);
       res.view({
         tarea: tarea
       });
@@ -29,14 +29,48 @@ module.exports = {
   },
 
     query2: function(req, res, next) {
-      Tarea.query('SELECT first_name FROM actor;', function (err, results) {
-        if (err) {
-        res.send(400);
-        } else {
-          res.send(results);
-          }   
+    Tarea.query('SELECT first_name FROM actor', function(err, tarea) {
+      if (err) return res.serverError(err);
+      
+      /*return res.json(tarea);*/
+      res.view({
+        tarea: tarea
       });
-    }
+    });
+  },
+
+  query3: function(req, res, next) {
+    Tarea.query('SELECT first_name FROM actor', function(err, tarea) {
+      if (err) return res.serverError(err);
+      
+      /*return res.json(tarea);*/
+      res.view({
+        tarea: tarea
+      });
+    });
+  },
+
+  query4: function(req, res, next) {
+    Tarea.query('SELECT first_name FROM actor', function(err, tarea) {
+      if (err) return res.serverError(err);
+      
+      /*return res.json(tarea);*/
+      res.view({
+        tarea: tarea
+      });
+    });
+  },
+
+  query5: function(req, res, next) {
+    Tarea.query('SELECT first_name FROM actor', function(err, tarea) {
+      if (err) return res.serverError(err);
+      
+      /*return res.json(tarea);*/
+      res.view({
+        tarea: tarea
+      });
+    });
+  },
 
 };
 

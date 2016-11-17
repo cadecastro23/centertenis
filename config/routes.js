@@ -35,6 +35,10 @@ module.exports.routes = {
   '/': {
     //view: 'homepage'
     view:'static/home'
+  },
+
+  'GET /personas': {
+    view: 'menu/personas'
   }
 
   /***************************************************************************
