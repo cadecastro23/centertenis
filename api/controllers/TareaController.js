@@ -21,7 +21,7 @@ module.exports = {
     Tarea.query('SELECT first_name FROM actor', function(err, tarea) {
       if (err) return res.serverError(err);
       
-      return res.json(tarea);
+      /*return res.json(tarea);*/
       res.view({
         tarea: tarea
       });
@@ -40,7 +40,7 @@ module.exports = {
   },
 
   query3: function(req, res, next) {
-    Tarea.query('SELECT first_name FROM actor', function(err, tarea) {
+    Tarea.query('select f.title as PeliculasNuncaRentadas from film f left outer join inventory i on f.film_id = i.film_id left outer join rental r on r.inventory_id = i.inventory_id where (r.inventory_id IS NULL) group by f.title;', function(err, tarea) {
       if (err) return res.serverError(err);
       
       /*return res.json(tarea);*/
