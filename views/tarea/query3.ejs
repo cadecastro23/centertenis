@@ -3,15 +3,16 @@
 <head>
 
 <div class="container panel">
-  <h1>Query 1</h1>
+  <h1>Query 3</h1>
 
 
 </head>
 <body>
     <div align="center">    
-        <h1> ENUNCIADO: Peliculas de 3 actores específicos, de 2 categorías específicas, con cantidad de ciudades en las que se mostraran, su descripción y si son en ingles (true /false)</h1>
-        
-        <button style="margin:20px;" class="btn btn-lg btn-query" onclick="creartabla()"><span class="glyphicon glyphicon-play"></span> Query # </button>
+        <h1> ENUNCIADO: Lista de películas que nunca han sido rentadas</h1>
+        <form method="POST">
+             <button type="submit" style="margin:20px;" class="btn btn-lg btn-query"><span class="glyphicon glyphicon-play"></span> Query # </button>
+        </form>
     </div>
 
     <div id="showData" class="table-responsive"></div>
@@ -26,9 +27,9 @@
       <th></th>
     </tr>
 
-    <% _.each(tarea, function (f) { %>
-    <tr data-id="<%= f.title  %>" data-model="tarea" >
-      <td><%= f.title %></td>
+    <% _.each(tarea, function (tarea) { %>
+    <tr data-id="<%= tarea.id  %>" data-model="tarea" >
+      <td><%= tarea.title %></td>
     </tr>
     <% }) %>
   </table>
