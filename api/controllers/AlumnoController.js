@@ -78,6 +78,26 @@ module.exports = {
     Alumno.destroy(req.param('id')).exec( function() {
       res.redirect('/alumno/');
     });
-  }
+  },
+
+  queryquiz: function(req, res, next) {
+      console.log(req.method);
+      if(req.method == "POST"){
+        Alumno.query('select nombre, apellido, deuda from alumno where deuda > 0 order by deuda desc;', function(err, alumno) {
+      console.log(alumno);
+          if (err) return res.serverError(err)
+        
+          res.view({
+            alumno: alumno
+          });
+        });
+      }else {
+      res.view({
+        alumno:[]
+      });
+      }
+    },
+
+    
 
 };

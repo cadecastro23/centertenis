@@ -1,0 +1,30 @@
+<div class="container panel">
+  <h1>Administrador de Entrenamientos</h1>
+
+  <table class="table">
+    <tr>
+      <th>Cancha</th>
+      <th>Profesor</th>
+      <th>Formato de entrenamiento</th>
+      <th>Tipo de entrenamiento</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% _.each(entrenamiento, function (entrenamiento) { %>
+    <tr data-id="<%= entrenamiento.id %>" data-model="entrenamiento" >
+      <td><%= entrenamiento.cancha %></td>
+      <td><%= entrenamiento.profesor %></td>
+      <td><%= entrenamiento.cod_categ_entre %></td>
+      <td><%= entrenamiento.cod_tipo_entre %></td>
+      <td><a href="/entrenamiento/show/<%= entrenamiento.id %>">Show</a></td>
+      <td><a href="/entrenamiento/edit/<%= entrenamiento.id %>">Edit</a></td>
+      <td><a href="/entrenamiento/destroy/<%= entrenamiento.id %>">Delete</a></td>
+    </tr>
+    <% }) %>
+  </table>
+
+  <a href="/entrenamiento/new">Nuevo entrenamiento</a>
+
+</div>

@@ -1,0 +1,73 @@
+<div class="container">
+
+    <form class="well form-horizontal" action="/turno/update/<%= turno.codigo %>" method="POST"  id="contact_form">
+    <form action="/turno/update/<%= turno.codigo %>" method="POST" >
+<fieldset>
+
+<!-- Form Name -->
+<legend>Editando Turno</legend>
+
+<!-- Codigo-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Codigo</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="codigo" placeholder="Codigo" class="form-control"  type="text" value="<%= turno.codigo%>">
+    </div>
+  </div>
+</div>
+
+<!-- Dia de semana-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Dia de semana</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="dia_semana" placeholder="dia_semana" class="form-control"  type="text" value="<%= turno.dia_semana%>">
+    </div>
+  </div>
+</div>
+
+<!-- Horario-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">Horario</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="horario" placeholder="Horario" class="form-control"  type="text" value="<%= turno.horario%>">
+    </div>
+  </div>
+</div>
+
+
+<!-- Descripcion-->
+       
+<div class="form-group">
+  <label class="col-md-4 control-label">Descripcion</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+          <textarea class="form-control" name="comment" placeholder="Descripcion"></textarea>
+  </div>
+  </div>
+</div>
+
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-warning" >Editar <span class="glyphicon glyphicon-pencil"></span></button>
+    <a href="/turno" class="btn btn-warning" role="button">Back</a>
+  </div>
+</div>
+
+
+</fieldset>
+</form>
+</div>
+    </div><!-- /.container -->

@@ -1,0 +1,15 @@
+<div class="container panel">
+  <h1> Editando Torneo </h1>
+  <form action="/torneo/update/<%= torneo.id %>" method="POST" >
+
+    <input type="text" placeholder="Nombre" name="nombre" value="<%= torneo.nombre %>"><br />
+    <input type="date" placeholder="Fecha" name="fecha_torneo" value="<%= torneo.fecha_torneo %>"><br />
+    <input type="text" placeholder="Premio" name="premio" value="<%= torneo.premio %>"><br />
+    <input type="text" placeholder="Resultado" name="resultado" value="<%= torneo.resultado %>"><br />
+    <input type="text" placeholder="Lugar" name="lugar_torneo" value="<%= torneo.lugar_torneo %>"><br />
+
+    <input type="submit" value="Editar Torneo" >
+  </form>
+
+  <a href="/Torneo">Back</a>
+</div>

@@ -1,4 +1,4 @@
-<div class="container panel">
+ <!--<div class="container panel">
   <h1> Editando Alumno </h1>
   <form action="/alumno/update/<%= alumno.id %>" method="POST" >
 
@@ -6,15 +6,148 @@
     <input type="text" placeholder="Apellidos" name="apellido" value="<%= alumno.apellido %>"><br />
     <input type="text" placeholder="Email" name="email" value="<%= alumno.email %>"><br />
     <input type="text" placeholder="Cedula" name="cedula" value="<%= alumno.cedula %>"><br />
-    <input type="text" placeholder="Sexo" name="sexo" value="<%= alumno.sexo %>"><br />
+   <!-- <input type="text" placeholder="Sexo" name="sexo" value="<%= alumno.sexo %>"><br /> -->
+   <!--<select name="sexo">
+    <option value="M">Masculino</option>
+    <option value="F">Femenino</option>
+  </select>
+  <br>
+
     <input type="text" placeholder="Telefono" name="telefono" value="<%= alumno.telefono %>"><br />
     <input type="text" placeholder="Fecha de Nacimiento" name="nacimiento" value="<%= alumno.nacimiento %>"><br />
     <input type="text" placeholder="ID del profesor" name="entrenado" value="<%= alumno.entrenado %>"><br />
 
 
+    <button type="submit" class="btn btn-primary">Editar Alumno</button>
 
-    <input type="submit" value="Editar Alumno" >
   </form>
 
   <a href="/alumno">Back</a>
+</div>  -->
+
+
+
+<div class="container">
+
+    <form class="well form-horizontal" action="/alumno/update/<%= alumno.id %>" method="POST"  id="contact_form">
+    <form action="/alumno/update/<%= alumno.id %>" method="POST" >
+<fieldset>
+
+<!-- Form Name -->
+<legend>Editando Alumno</legend>
+
+<!-- Nombre-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Nombre</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="nombre" placeholder="Nombre" class="form-control"  type="text" value="<%= alumno.nombre%>">
+    </div>
+  </div>
 </div>
+
+<!-- Apellido-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Apellido</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="apellido" placeholder="Apellido" class="form-control"  type="text" value="<%= alumno.apellido%>">
+    </div>
+  </div>
+</div>
+
+<!-- Email-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">E-Mail</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="email" placeholder="E-Mail" class="form-control"  type="text" value="<%= alumno.email%>">
+    </div>
+  </div>
+</div>
+
+
+<!-- Telefono-->
+       
+<div class="form-group">
+  <label class="col-md-4 control-label">Telefono</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="telefono" placeholder="(0414)111-1111" class="form-control" type="text" value="<%= alumno.telefono%>">
+    </div>
+  </div>
+</div>
+
+
+<!-- Cedula-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Cedula</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-equalizer"></i></span>
+  <input name="cedula" placeholder="Cedula" class="form-control"  type="text" value="<%= alumno.cedula%>">
+    </div>
+</div>
+</div>
+
+<!-- entrenamiento -->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Entrenamiento</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="id_entrenamiento" placeholder="Entrenamiento" class="form-control"  type="text" value="<%= alumno.id_entrenamiento%>">
+    </div>
+  </div>
+</div>
+
+<!-- Sexo -->
+   
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Sexo</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="sexo" class="form-control selectpicker" >
+      <option value=" " >Sexo</option>
+      <option value="M">Masculino</option>
+      <option value="F">Femenino</option>
+    </select>
+  </div>
+</div>
+</div>
+
+<!-- Fecha de nacimiento-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Fecha de nacimiento</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+  <input name="nacimiento" placeholder="Fecha de nacimiento" class="form-control"  type="date" value="<%=alumno.nacimiento%>">
+    </div>
+</div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-warning" >Editar <span class="glyphicon glyphicon-pencil"></span></button>
+    <a href="/alumno" class="btn btn-warning" role="button">Back</a>
+  </div>
+</div>
+
+
+</fieldset>
+</form>
+</div>
+    </div><!-- /.container -->

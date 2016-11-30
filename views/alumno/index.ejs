@@ -6,11 +6,11 @@
       <th>Nombre</th>
       <th>Apellido</th>
       <th>Email</th>
+      <th>Telefono</th>
       <th>cedula</th>
       <th>Sexo</th>
-      <th>Telefono</th>
+      <th>Entrenamiento</th>
       <th>Fecha de nacimiento</th>
-      <th>ID Profesor</th>
       <th></th>
       <th></th>
       <th></th>
@@ -21,11 +21,11 @@
       <td><%= alumno.nombre %></td>
       <td><%= alumno.apellido %></td>
       <td><%= alumno.email %></td>
+      <td><%= alumno.telefono %></td>
       <td><%= alumno.cedula %></td>
       <td><%= alumno.sexo %></td>
-      <td><%= alumno.telefono %></td>
+      <td><%= alumno.id_entrenamiento %></td>
       <td><%= alumno.nacimiento %></td>
-      <td><%= alumno.entrenado %></td>
       <td><a href="/alumno/show/<%= alumno.id %>">Show</a></td>
       <td><a href="/alumno/edit/<%= alumno.id %>">Edit</a></td>
       <td><a href="/alumno/destroy/<%= alumno.id %>">Delete</a></td>
@@ -34,5 +34,4 @@
   </table>
 
   <a href="/alumno/new">Nuevo alumno</a>
-
 </div>

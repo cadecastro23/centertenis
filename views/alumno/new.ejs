@@ -1,16 +1,182 @@
-<div class="container panel">
-  <form action="/alumno/create" method="POST" >
-    <h2>Crear un alumno</h2>
-    <!-- comentar -->
-    <input type="text" placeholder="Nombres" name="nombre" ><br />
-    <input type="text" placeholder="Apellidos" name="apellido" ><br />
-    <input type="text" placeholder="Email" name="email" ><br />
-    <input type="text" placeholder="Cedula" name="cedula" ><br />
-    <input type="text" placeholder="Sexo" name="sexo" ><br />
-    <input type="text" placeholder="Telefono" name="telefono" ><br />
-    <input type="date" placeholder="Nacimiento" name="nacimiento" ><br />
-    <input type="text" placeholder="IDprofesor" name="entrenado" ><br />
+<!--<!DOCTYPE html>
+<html >
+<head>
 
-    <input type="submit" value="Crear Alumno" >
-  </form>
+  <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+
+
+  
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>
+<link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>-->
+
+<div class="container">
+
+    <form class="well form-horizontal" action="/alumno/create" method="post"  id="contact_form">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Crear un alumno</legend>
+
+<!-- Nombre-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Nombre</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="nombre" placeholder="Nombre" class="form-control"  type="text">
+    </div>
+  </div>
 </div>
+
+<!-- Apellido-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Apellido</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="apellido" placeholder="Apellido" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Email-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">E-Mail</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="email" placeholder="E-Mail" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+<!-- Telefono-->
+       
+<div class="form-group">
+  <label class="col-md-4 control-label">Telefono</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="telefono" placeholder="(0414)111-1111" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+
+<!-- Cedula-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Cedula</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-equalizer"></i></span>
+  <input name="cedula" placeholder="Cedula" class="form-control"  type="text">
+    </div>
+</div>
+</div>
+
+<!-- entrenamiento -->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Entrenamiento</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="id_entrenamiento" placeholder="Entrenamiento" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Sexo -->
+   
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Sexo</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="sexo" class="form-control selectpicker" >
+      <option value=" " >Sexo</option>
+      <option value="M">Masculino</option>
+      <option value="F">Femenino</option>
+    </select>
+  </div>
+</div>
+</div>
+
+<!-- Fecha de nacimiento-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Fecha de nacimiento</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+  <input name="nacimiento" placeholder="Fecha de nacimiento" class="form-control"  type="date">
+    </div>
+</div>
+</div>
+
+
+
+<!-- radio checks 
+ <div class="form-group">
+                        <label class="col-md-4 control-label">Do you have hosting?</label>
+                        <div class="col-md-4">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hosting" value="yes" /> Yes
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hosting" value="no" /> No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+
+<!-- Text area 
+  
+<div class="form-group">
+  <label class="col-md-4 control-label">Project Description</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+        	<textarea class="form-control" name="comment" placeholder="Project Description"></textarea>
+  </div>
+  </div>
+</div>-->
+
+<!-- Success message -->
+<!-- <div class="alert alert-success" role="alert" id="success_message">Gracias <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div> -->
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-warning" >Crear Alumno <span class="glyphicon glyphicon-send"></span></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+    </div><!-- /.container -->
+<!--
+     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+
+    <script src="/js/third-party/validacion_crud.js"></script>
+-->
+</body>
+</html>

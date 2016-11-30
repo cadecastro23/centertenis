@@ -19,8 +19,8 @@ module.exports.models = {
   ***************************************************************************/
   // connection: 'localDiskDb',
   connection: 'MysqlProyecto',
-  connection: 'MysqlTarea',
-  connection: 'Heroku',
+  //connection: 'MysqlTarea',
+  //connection: 'Heroku',
   
 
   /***************************************************************************
@@ -31,6 +31,6 @@ module.exports.models = {
   * See http://sailsjs.org/#!/documentation/concepts/ORM/model-settings.html  *
   *                                                                          *
   ***************************************************************************/
-   migrate: 'alter'
+   migrate: 'safe'
 
 };

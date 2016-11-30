@@ -1,0 +1,34 @@
+<div class="container panel">
+  <h1>Administrador de Torneos</h1>
+
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Fecha</th>
+      <th>Premio</th>
+      <th>Resultado</th>
+      <th>Lugar</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% _.each(torneo, function (torneo) { %>
+    <tr data-id="<%= torneo.id %>" data-model="torneo" >
+    <td><%= torneo.id %></td>
+      <td><%= torneo.nombre %></td>
+      <td><%= torneo.fecha_torneo %></td>
+      <td><%= torneo.premio %></td>
+      <td><%= torneo.resultado %></td>
+      <td><%= torneo.lugar_torneo %></td>
+      <td><a href="/torneo/show/<%= torneo.id %>">Show</a></td>
+      <td><a href="/torneo/edit/<%= torneo.id %>">Edit</a></td>
+      <td><a href="/torneo/destroy/<%= torneo.id %>">Delete</a></td>
+    </tr>
+    <% }) %>
+  </table>
+
+  <a href="/torneo/new">Nuevo torneo</a>
+
+</div>

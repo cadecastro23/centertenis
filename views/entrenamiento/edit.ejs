@@ -1,0 +1,92 @@
+<div class="container">
+
+    <form class="well form-horizontal" action="/entrenamiento/update/<%= entrenamiento.id %>" method="POST"  id="contact_form">
+    <form action="/entrenamiento/update/<%= entrenamiento.id %>" method="POST" >
+<fieldset>
+
+<!-- Form Name -->
+<legend>Editando Entrenamiento</legend>
+
+<!-- cancha-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Cancha</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="cancha" placeholder="Cancha" class="form-control"  type="text" value="<%= entrenamiento.cancha%>">
+    </div>
+  </div>
+</div>
+
+<!-- tipo de entrenamiento-->
+
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Tipo de entrenamiento</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="cod_tipo_entre" class="form-control selectpicker" >
+      <option value=" " >Tipo de entrenamiento</option>
+      <option value="F">Fisico</option>
+      <option value="T">Tenis</option>
+    </select>
+  </div>
+</div>
+</div>
+
+<!-- categoria de entrenamiento-->
+
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Categoria de entrenamiento</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="cod_categ_entre" class="form-control selectpicker" >
+      <option value=" " >Categoria de entrenamiento</option>
+      <option value="F">Individual</option>
+      <option value="T">Grupal</option>
+    </select>
+  </div>
+</div>
+</div>
+
+<!-- Profesor-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Profesor</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="id_profesor" placeholder="Profesor" class="form-control"  type="text" value="<%= entrenamiento.profesor%>">
+    </div>
+  </div>
+</div>
+
+
+<!-- Descripcion -->
+  
+<div class="form-group">
+  <label class="col-md-4 control-label">Descripcion</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+          <textarea class="form-control" name="comment" placeholder="Descripcion" value="<%= entrenamiento.descripcion%>"></textarea>
+  </div>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-warning" >Editar <span class="glyphicon glyphicon-pencil"></span></button>
+    <a href="/alumno" class="btn btn-warning" role="button">Back</a>
+  </div>
+</div>
+
+
+</fieldset>
+</form>
+</div>
+    </div><!-- /.container -->

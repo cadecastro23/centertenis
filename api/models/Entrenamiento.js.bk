@@ -11,49 +11,42 @@ connection:'MysqlProyecto',
 //connection:'Heroku',
 
   attributes: {
-    nombre: {
+    cod_frecuencia: {
       type: 'string',
-      size: 50,
+      size: 1,
       required: true
     },
 
-    apellido: {
+    descripcion: {
       type: 'string',
-      size: 50,
+      size: 100
+    },
+
+    cod_tipo_entre: {
+      type: 'string',
+      size: 1,
       required: true
     },
 
-    email: {
-      type: 'string',
-      size: 70,
-      email: true
-    },
-
-    cedula: {
-      type: 'integer',
-      size: 11,
-      unique: true
-    },
-
-    sexo: {
-      type: 'string',
-      required: true
-    },
-
-    telefono: {
+    cancha: {
       type: 'string',
       size: 50
     },
 
-    nacimiento: {
-      type: 'date',
+    cod_categ_entre: {
+      type: 'string',
+      size: 1,
       required: true
     },
 
-    id_entrenamiento: {
+    id_profesor: {
+      type: 'integer',
+      required: true
+    },
+
+    id_alumno: {
       type: 'integer'
     }
-
 
     //relacion entre profesor alumno
    // entrenado: {

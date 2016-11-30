@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<div class="container panel">
+  <h1>Query quiz</h1>
+
+
+</head>
+<body>
+	<div align="center">	
+		<h1> query quiz</h1>
+		
+		<button style="margin:20px;" class="btn btn-lg btn-query" onclick="creartabla()"><span class="glyphicon glyphicon-play"></span> Query # </button>
+	</div>
+
+	<div id="showData" class="table-responsive"></div>
+
+    
+
+  <table class="table">
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Deuda</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% _.each(queryquiz, function (queryquiz) { %>
+    <tr data-id="<%= queryquiz.id %>" data-model="queryquiz" >
+      <td><%= queryquiz.nombre %></td>
+      <td><%= queryquiz.apellido %></td>
+      <td><%= queryquiz.deuda %></td>
+    </tr>
+    <% }) %>
+  </table>
+
+
+
+<div class="container panel">
+  <h1>Administrador de Profesores</h1>
+
+  <table class="table">
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Deuda</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% _.each(queryquiz, function (queryquiz) { %>
+    <tr data-id="<%= queryquiz.id %>" data-model="queryquiz" >
+    <td><%= queryquiz.nombre %></td>
+      <td><%= queryquiz.apellido %></td>
+      <td><%= queryquiz.deuda %></td>
+    </tr>
+    <% }) %>
+  </table>
+
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+

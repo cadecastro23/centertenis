@@ -1,0 +1,26 @@
+<div class="container panel">
+  <form action="/alumno/create" method="POST" >
+    <h2>Crear un alumno</h2>
+    <!-- comentar -->
+    <input type="text" placeholder="Nombres" name="nombre" ><br />
+    <input type="text" placeholder="Apellidos" name="apellido" ><br />
+    <input type="text" placeholder="Email" name="email" ><br />
+    <input type="text" placeholder="Cedula" name="cedula" ><br />
+   <!-- <input type="text" placeholder="Sexo" name="sexo" ><br /> -->
+<select name="sexo">
+    <option value="M">Masculino</option>
+    <option value="F">Femenino</option>
+  </select>
+  <br>
+
+    <input type="text" placeholder="Telefono" name="telefono" ><br />
+    <input type="date" placeholder="Nacimiento" name="nacimiento" ><br />
+    <input type="text" placeholder="IDprofesor" name="entrenado" ><br />
+
+    <input type="submit" value="Crear Alumno" >
+
+
+
+    
+  </form>
+</div>

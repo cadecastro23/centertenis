@@ -1,0 +1,21 @@
+<div class="container panel">
+  <div class="panel-body">
+    <h1> Torneo </h1>
+    <div>Nombre: <%= torneo.nombre %> </div>
+    <div>Fecha: <%= torneo.fecha_torneo %> </div>
+    <div>Premio: <%= torneo.premio %> </div>
+    <div>Resultado: <%= torneo.resultado %> </div>
+    <div>Lugar: <%= torneo.lugar_torneo %> </div>
+
+    <a href="/torneo/edit/<%= torneo.id %>">Edit</a> |
+    <a href="/torneo">Back</a>
+  </div>
+</div>
+
+
+<!--
+<form action="/alumno/new" method="POST" >
+    <input type="hidden" value="<% torneo.id %>" name="entrenado">
+    <input type="submit" value="Add Alumno" />
+</form>
+/>-->

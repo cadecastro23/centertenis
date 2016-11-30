@@ -4,44 +4,38 @@ connection:'MysqlProyecto',
 //connection:'Heroku',
 
   attributes: {
-    nombre: {
-      type: 'string',
-      size: 50,
-      required: true
-    },
+    
+    
 
-    apellido: {
+    codigo: {
       type: 'string',
-      size: 50,
-      required: true
-    },
-
-    email: {
-      type: 'string',
-      size: 70,
-      email: true
-    },
-
-    cedula: {
-      type: 'integer',
+      size: 1,
       required: true,
-      size: 11,
+      primaryKey: true,
       unique: true
     },
 
-    sexo: {
+    descripcion: {
       type: 'string',
-      required: true   
+      size: 100
     },
 
-    telefono: {
+    horario: {
       type: 'string',
-      size: 50
-    },
-
-    nacimiento: {
-      type: 'date',
+      size: 50,
       required: true
+    },
+
+    cod_tipo_entre: {
+      type: 'string',
+      required: true,
+      size: 1
+    },
+
+    dia_semana: {
+      type: 'string',
+      size: 10,
+      required: true   
     }
 
     //relacion entre profesor alumno

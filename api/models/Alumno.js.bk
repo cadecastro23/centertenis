@@ -1,3 +1,10 @@
+/**
+ * Alumno.js
+ *
+ * @description :: TODO: You might write a short summary of how this model works and what it represents here.
+ * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
+ */
+
 module.exports = {
 
 connection:'MysqlProyecto',
@@ -6,37 +13,31 @@ connection:'MysqlProyecto',
   attributes: {
     nombre: {
       type: 'string',
-      size: 50,
       required: true
     },
 
     apellido: {
       type: 'string',
-      size: 50,
       required: true
     },
 
     email: {
       type: 'string',
-      size: 70,
       email: true
     },
 
     cedula: {
-      type: 'integer',
-      required: true,
-      size: 11,
+      type: 'string',
       unique: true
     },
 
     sexo: {
-      type: 'string',
-      required: true   
+      type: 'string'
     },
 
     telefono: {
       type: 'string',
-      size: 50
+      required: true
     },
 
     nacimiento: {
@@ -45,10 +46,11 @@ connection:'MysqlProyecto',
     }
 
     //relacion entre profesor alumno
-   // alumnos: {
-     // collection: 'alumno',
-      //via: 'entrenado'
+   // entrenado: {
+     // model:'profesor',
+      //required: true
     //}
 
   }
 };
+

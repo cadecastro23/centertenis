@@ -61,7 +61,6 @@
     <link rel="stylesheet" href="/styles/bootstrap.css">
     <link rel="stylesheet" href="/styles/customstyle.css">
     <link rel="stylesheet" href="/styles/importer.css">
-    <link rel="stylesheet" href="/styles/style.css">
     <!--STYLES END-->
 
 
@@ -91,13 +90,10 @@
           <!-- <li id="personas" class="menu-item"><a title="Personas" href="/personas">Personas</a></li> -->
           <li id="alumno" class="menu-item"><a title="Alumnos" href="/alumno">Alumnos</a></li>
           <li id="profesor" class="menu-item"><a title="Profesor" href="/profesor">Profesor</a></li>
-          <li id="entrenamiento" class="menu-item"><a title="Entrenamientos" href="/entrenamiento">Entrenamientos</a>
+          <li id="entrenamientos" class="menu-item"><a title="Entrenamientos" href="/entrenamientos">Entrenamientos</a>
           </li>
-          <li id="equipo" class="menu-item"><a title="Equipo" href="/equipo">Equipos</a></li>
-          <li id="torneo" class="menu-item"><a title="Torneo" href="/torneo">Torneos</a></li>
-          <li id="turno" class="menu-item"><a title="Turno" href="/turno">Horarios de clase</a></li>
           <li id="Tarea" class="menu-item"><a title="Tarea" href="/Tarea">Tarea</a>
-          <li id="queryquiz" class="menu-item"><a title="queryquiz" href="/queryquiz">Quiz de query</a>
+          <li id="Torneo" class="menu-item"><a title="Torneo" href="/torneo">Torneos</a>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right"><li></li></ul>
@@ -180,7 +176,6 @@
     <script src="/js/third-party/jquery.form.js"></script>
     <script src="/js/third-party/jquery.min.js"></script>
     <script src="/js/third-party/jquery.validate.js"></script>
-    <script src="/js/third-party/validacion_crud.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>
