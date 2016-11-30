@@ -1,17 +1,114 @@
-<div class="container panel">
-  <h1> Editando Profesor </h1>
-  <form action="/profesor/update/<%= profesor.id %>" method="POST" >
 
-    <input type="text" placeholder="Nombres" name="nombre" value="<%= profesor.nombre %>"><br />
-    <input type="text" placeholder="Apellidos" name="apellido" value="<%= profesor.apellido %>"><br />
-    <input type="text" placeholder="Email" name="email" value="<%= profesor.email %>"><br />
-    <input type="text" placeholder="Cedula" name="cedula" value="<%= profesor.cedula %>"><br />
-    <input type="text" placeholder="Sexo" name="sexo" value="<%= profesor.sexo %>"><br />
-    <input type="text" placeholder="Telefono" name="telefono" value="<%= profesor.telefono %>"><br />
-    <input type="text" placeholder="Fecha de Nacimiento" name="nacimiento" value="<%= profesor.nacimiento %>"><br />
+<div class="container">
 
-    <input type="submit" value="Editar Profesor" >
-  </form>
+    <form class="well form-horizontal" action="/profesor/update/<%= profesor.id %>" method="POST"  id="contact_form">
+    <form action="/profesor/update/<%= profesor.id %>" method="POST" >
+<fieldset>
 
-  <a href="/Profesor">Back</a>
+<!-- Form Name -->
+<legend>Editando Profesor</legend>
+
+<!-- Nombre-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Nombre</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="nombre" placeholder="Nombre" class="form-control"  type="text" value="<%= profesor.nombre%>">
+    </div>
+  </div>
 </div>
+
+<!-- Apellido-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Apellido</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="apellido" placeholder="Apellido" class="form-control"  type="text" value="<%= profesor.apellido%>">
+    </div>
+  </div>
+</div>
+
+<!-- Email-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">E-Mail</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="email" placeholder="E-Mail" class="form-control"  type="text" value="<%= profesor.email%>">
+    </div>
+  </div>
+</div>
+
+
+<!-- Telefono-->
+       
+<div class="form-group">
+  <label class="col-md-4 control-label">Telefono</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="telefono" placeholder="(0414)111-1111" class="form-control" type="text" value="<%= profesor.telefono%>">
+    </div>
+  </div>
+</div>
+
+
+<!-- Cedula-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Cedula</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-equalizer"></i></span>
+  <input name="cedula" placeholder="Cedula" class="form-control"  type="text" value="<%= profesor.cedula%>">
+    </div>
+</div>
+</div>
+
+
+<!-- Sexo -->
+   
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Sexo</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="sexo" class="form-control selectpicker" >
+      <option value=" " >Sexo</option>
+      <option value="M">Masculino</option>
+      <option value="F">Femenino</option>
+    </select>
+  </div>
+</div>
+</div>
+
+<!-- Fecha de nacimiento-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Fecha de nacimiento</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+  <input name="nacimiento" placeholder="Fecha de nacimiento" class="form-control"  type="date" value="<%=profesor.nacimiento%>">
+    </div>
+</div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-warning" >Editar <span class="glyphicon glyphicon-pencil"></span></button>
+    <a href="/profesor" class="btn btn-warning" role="button">Back</a>
+  </div>
+</div>
+
+
+</fieldset>
+</form>
+</div>
+    </div><!-- /.container -->

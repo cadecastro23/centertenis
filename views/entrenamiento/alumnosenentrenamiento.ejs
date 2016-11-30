@@ -1,0 +1,23 @@
+
+
+<h3>Alumnos</h3>
+
+<table class="table">
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <% _.each(entrenamiento, function (entrenamiento) { %>
+    <tr data-id="<%= entrenamiento.id %>" data-model="entrenamiento" >
+      <td><%= entrenamiento.nombre %></td>
+      <td><%= entrenamiento.apellido %></td>
+    </tr>
+    <% }) %>
+  </table>
+
+    <a href="/entrenamiento">Back</a>
+  </div>
+</div>

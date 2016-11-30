@@ -6,7 +6,7 @@
  */
 
 module.exports = {
-/*
+
    index: function(req, res, next){
      Tarea.find(function foundTarea (err, tarea) {
        if (err) return next(err);
@@ -15,7 +15,7 @@ module.exports = {
          tarea: tarea
        });
      });
-   },*/
+   },
 
     query1: function(req, res, next) {
       console.log(req.method);

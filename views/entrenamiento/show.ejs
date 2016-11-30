@@ -2,13 +2,15 @@
   <div class="panel-body">
     <h1> Entrenamiento </h1>
     <div>Cancha: <%= entrenamiento.cancha %> </div>
-    <div>Profesor: <%= entrenamiento.profesor %> </div>
+    <div>Profesor: <%= entrenamiento.id_profesor %> </div>
     <div>Tipo de entrenamiento: <%= entrenamiento.cod_tipo_entre %> </div>
     <div>Categoria de entrenamiento: <%= entrenamiento.cod_categ_entre %> </div>
     <div>Descripcion: <%= entrenamiento.descripcion %> </div>
 
 
 
+<h1>Ver alumnos</h1> 
+<p><button class="btn"><a href="entrenamiento/alumnosenentrenamiento">Query 1</a></button></p>
 
 
     <a href="/entrenamiento/edit/<%= entrenamiento.id %>">Edit</a> |

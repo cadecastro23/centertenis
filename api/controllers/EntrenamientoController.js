@@ -68,18 +68,20 @@ module.exports = {
     });
   },
 
-  alumnos_en_entrenamiento: function(req, res, next) {
-        Alumno.query('select a.nombre, a.apellido ' +
+  alumnosenentrenamiento: function(req, res, next) {
+        Entrenamiento.query('select a.nombre, a.apellido ' +
                     'from entrenamiento e ' +
                     'inner join alumno a ' +
-                    'on a.id_entrenamiento=e.id;', function(err, alumno) {
+                    'on a.id_entrenamiento=e.id;', function(err, entrenamiento) {
+          console.log(entrenamiento);
       if (err) {
         return res.serverError(err);
       }
-      res.view({
-        alumno: alumno
+      return res.view({
+        entrenamiento: entrenamiento , layout: null
       });
-    });
+    }
+    );
     }
 
 };

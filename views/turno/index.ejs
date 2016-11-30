@@ -1,9 +1,8 @@
 <div class="container panel">
-  <h1>Administrador de Turnos</h1>
+  <h1>Horarios de clase</h1>
 
   <table class="table">
     <tr>
-      <th>Codigo</th>
       <th>Dia se semana</th>
       <th>Horario</th>
       <th>Tipo de entrenamiento</th>
@@ -15,7 +14,6 @@
 
     <% _.each(turno, function (turno) { %>
     <tr data-id="<%= turno.codigo %>" data-model="turno" >
-      <td><%= turno.codigo %></td>
       <td><%= turno.dia_semana %></td>
       <td><%= turno.horario %></td>
       <td><%= turno.cod_tipo_entre %></td>
