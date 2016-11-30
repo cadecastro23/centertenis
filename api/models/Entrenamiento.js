@@ -7,6 +7,10 @@
 
 module.exports = {
 
+
+connection:'MysqlProyecto',
+connection:'Heroku',
+
   attributes: {
 
     //relacion entrenamiento frecuencia
