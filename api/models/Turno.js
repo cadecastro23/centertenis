@@ -1,3 +1,5 @@
+//creacion de atributos de turno
+
 module.exports = {
 
 //connection:'MysqlProyecto',

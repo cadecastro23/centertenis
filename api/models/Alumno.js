@@ -6,6 +6,8 @@
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
+//creacion de atributos de alumno
+
 module.exports = {
 
 //connection:'MysqlProyecto',

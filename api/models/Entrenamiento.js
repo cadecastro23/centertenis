@@ -5,6 +5,10 @@
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
+
+ //creacion de atributos de antrenamiento
+
+
 module.exports = {
 
 

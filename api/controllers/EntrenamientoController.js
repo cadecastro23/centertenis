@@ -20,7 +20,7 @@ module.exports = {
         res.redirect('/entrenamiento/show/' + entrenamiento.id);
      });
    },
-
+//muestra los datos de los entrenamientos seleccionados
    show: function (req, res, next) {
      Entrenamiento.findOne(req.param('id'), function foundEntrenamiento(err, entrenamiento) {
         if (err) return next(err);
@@ -43,7 +43,7 @@ module.exports = {
 
      });
    },
-
+//muestra todos los entrenamientos
    index: function(req, res, next){
      Entrenamiento.find(function foundEntrenamiento (err, entrenamiento) {
        if (err) return next(err);
@@ -53,7 +53,7 @@ module.exports = {
        });
      });
    },
-
+//editar un entrenamiento
   edit: function(req, res, next) {
      Entrenamiento.findOne(req.param('id'), function foundEntrenamiento(err,entrenamiento) {
        if (err) return next(err);
@@ -74,13 +74,14 @@ module.exports = {
       res.redirect('/entrenamiento/show/' +req.param('id'));
     });
   },
-
+//eliminar un entrenamiento
   destroy: function(req, res, next) {
     Entrenamiento.destroy(req.param('id')).exec( function() {
       res.redirect('/entrenamiento/');
     });
   },
 
+//query para mostrar los alumnos en los entrenamientos
   alumnosenentrenamiento: function(req, res, next) {
         Entrenamiento.query('select a.nombre, a.apellido ' +
                     'from entrenamiento e ' +

@@ -33,6 +33,7 @@ module.exports = {
      });
    },
 
+//muestra todos los datos al seleccionar un alumno
    show: function (req, res, next) {
      Alumno.findOne(req.param('id'), function foundAlumno(err, alumno) {
         if (err) return next(err);
@@ -43,6 +44,7 @@ module.exports = {
      });
    },
 
+//muestra todos los alumnos que hay en la bd
    index: function(req, res, next){
      Alumno.find(function foundAlumnos (err, alumnos) {
        if (err) return next(err);
@@ -53,6 +55,8 @@ module.exports = {
      });
    },
 
+
+//edita el alumno seleccionado
   edit: function(req, res, next) {
      Alumno.findOne(req.param('id'), function foundAlumno(err,alumno) {
        if (err) return next(err);
@@ -74,11 +78,13 @@ module.exports = {
     });
   },
 
+//elimina un alumno
   destroy: function(req, res, next) {
     Alumno.destroy(req.param('id')).exec( function() {
       res.redirect('/alumno/');
     });
   },
+
 
   queryquiz: function(req, res, next) {
       console.log(req.method);

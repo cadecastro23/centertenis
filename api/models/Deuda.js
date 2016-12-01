@@ -1,5 +1,8 @@
 module.exports = {
 
+
+//creacion de atributos de deuda
+
 //connection:'MysqlProyecto',
 connection:'Heroku',
 

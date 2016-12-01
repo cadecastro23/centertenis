@@ -1,3 +1,6 @@
+
+//creacion de atributos de profesor
+
 module.exports = {
 
 //connection:'MysqlProyecto',

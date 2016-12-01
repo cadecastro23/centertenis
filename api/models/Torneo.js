@@ -5,6 +5,8 @@
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
+//creacion de atributos de torneo
+
 module.exports = {
   //connection:'MysqlProyecto',
   connection:'Heroku',

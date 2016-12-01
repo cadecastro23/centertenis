@@ -32,7 +32,7 @@ module.exports = {
         res.redirect('/turno/show/' + turno.codigo);
      });
    },
-
+ //muestra un Turno en la bd y sus datos
    show: function (req, res, next) {
      Turno.findOne(req.param('codigo'), function foundTurno(err, turno) {
         if (err) return next(err);
@@ -42,7 +42,7 @@ module.exports = {
         });
      });
    },
-
+ //muestra los Turno en la bd
    index: function(req, res, next){
      Turno.find(function foundTurno (err, turno) {
        if (err) return next(err);
@@ -52,7 +52,7 @@ module.exports = {
        });
      });
    },
-
+ //edita un Turno en la bd 
   edit: function(req, res, next) {
      Turno.findOne(req.param('codigo'), function foundTurno(err,turno) {
        if (err) return next(err);
@@ -73,7 +73,7 @@ module.exports = {
       res.redirect('/turno/show/' +req.param('codigo'));
     });
   },
-
+ //elimina un Turno en la bd
   destroy: function(req, res, next) {
     Turno.destroy(req.param('codigo')).exec( function() {
       res.redirect('/turno/');

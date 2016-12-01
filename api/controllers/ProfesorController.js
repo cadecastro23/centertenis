@@ -19,7 +19,7 @@ module.exports = {
       res.redirect('/profesor/show/' + profesor.id);
     });
   },
-
+//muestra todos los datos al seleccionar un profesor
  show: function (req, res, next) {
     Profesor.findOne(req.param('id')).populateAll().exec( function(err, profesor) {
       if (err) return next(err);
@@ -33,7 +33,7 @@ module.exports = {
 
 
 
-
+//muestra todos los profesor que hay en la bd
   index: function(req, res, next){
     Profesor.find(function foundProfesor (err, profesor) {
       if (err) return next(err);
@@ -43,7 +43,7 @@ module.exports = {
       });
     });
   },
-
+//edita el profesor seleccionado
   edit: function(req, res, next) {
     Profesor.findOne(req.param('id'), function foundProfesor(err,profesor) {
       if (err) return next(err);
@@ -64,7 +64,7 @@ module.exports = {
       res.redirect('/profesor/show/' +req.param('id'));
     });
   },
-
+//elimina un profesor
   destroy: function(req, res, next) {
     Profesor.destroy(req.param('id')).exec( function() {
       res.redirect('/profesor/');
