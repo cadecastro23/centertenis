@@ -7,7 +7,8 @@
 
 module.exports = {
 
-	connection: 'MysqlTarea',
+	//connection: 'MysqlTarea',
+	connection:'Heroku',
 
   attributes: {
 
