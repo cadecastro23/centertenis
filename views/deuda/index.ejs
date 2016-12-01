@@ -1,0 +1,21 @@
+<div class="container panel">
+  <h1>Pagos pendientes</h1>
+
+  <table class="table table-inverse">
+    <tr>
+      <th>Deudor</th>
+      <th>Monto</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% _.each(deuda, function (deuda) { %>
+    <tr data-id="<%= deuda.id %>" data-model="deuda" >
+      <td><%= deuda.Deudor %></td>
+      <td><%= deuda.Monto %></td>
+    </tr>
+    <% }) %>
+  </table>
+
+</div>

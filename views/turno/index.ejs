@@ -14,9 +14,9 @@
 
     <% _.each(turno, function (turno) { %>
     <tr data-id="<%= turno.codigo %>" data-model="turno" >
-      <td><%= turno.dia_semana %></td>
+      <td ALIGN=center><%= turno.dia_semana %></td>
       <td><%= turno.horario %></td>
-      <td><%= turno.cod_tipo_entre %></td>
+      <td ALIGN=center><%= turno.cod_tipo_entre %></td>
       <td><%= turno.descripcion %></td>
     </tr>
     <% }) %>

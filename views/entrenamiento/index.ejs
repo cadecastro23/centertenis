@@ -5,8 +5,8 @@
     <tr>
       <th>Cancha</th>
       <th>Profesor</th>
-      <th>Formato de entrenamiento</th>
-      <th>Tipo de entrenamiento</th>
+      <th>Formato de entrenamiento (Individual, Grupal)</th>
+      <th>Tipo de entrenamiento (Fisico, Tenis)</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,10 +14,10 @@
 
     <% _.each(entrenamiento, function (entrenamiento) { %>
     <tr data-id="<%= entrenamiento.id %>" data-model="entrenamiento" >
-      <td><%= entrenamiento.cancha %></td>
-      <td><%= entrenamiento.id_profesor %></td>
-      <td><%= entrenamiento.cod_categ_entre %></td>
-      <td><%= entrenamiento.cod_tipo_entr %></td>
+      <td ALIGN=center><%= entrenamiento.cancha %></td>
+      <td ALIGN=center><%= entrenamiento.id_profesor %></td>
+      <td ALIGN=center><%= entrenamiento.cod_categ_entre %></td>
+      <td ALIGN=center><%= entrenamiento.cod_tipo_entr %></td>
       <td><a href="/entrenamiento/show/<%= entrenamiento.id %>">Show</a></td>
       <td><a href="/entrenamiento/edit/<%= entrenamiento.id %>">Edit</a></td>
       <td><a href="/entrenamiento/destroy/<%= entrenamiento.id %>">Delete</a></td>

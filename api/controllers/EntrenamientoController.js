@@ -78,7 +78,7 @@ module.exports = {
         return res.serverError(err);
       }
       return res.view({
-        entrenamiento: entrenamiento , layout: null
+        entrenamiento: entrenamiento
       });
     }
     );
