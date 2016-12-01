@@ -29,7 +29,7 @@ module.exports = {
   Entrenamiento.query('select a.nombre, a.apellido ' +
                     'from entrenamiento e ' +
                     'inner join alumno a ' +
-                    'on a.id_entrenamiento=e.id where e.id=1;', function(err, alumnos) {
+                    'on a.id_entrenamiento=e.id;', function(err, alumnos) {
           console.log(alumnos);
       if (err) {
         return res.serverError(err);
