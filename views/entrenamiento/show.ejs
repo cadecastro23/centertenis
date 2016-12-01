@@ -9,9 +9,24 @@
 
 
 
-<h1>Ver alumnos</h1> 
-<p><button class="btn"><a href="entrenamiento/alumnosenentrenamiento">Query 1</a></button></p>
-<a href="alumnosenentrenamiento">ver alumnos</a>
+<h1>Alumnos</h1> 
+
+<table class="table">
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <% _.each(alumnos, function (alumnos) { %>
+    <tr data-id="<%= alumnos.id %>" data-model="alumnos" >
+      <td><%= alumnos.nombre %></td>
+      <td><%= alumnos.apellido %></td>
+    </tr>
+    <% }) %>
+  </table>
+
 
     <a href="/entrenamiento/edit/<%= entrenamiento.id %>">Edit</a> |
     <a href="/entrenamiento">Back</a>

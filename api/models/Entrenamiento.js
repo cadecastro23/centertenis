@@ -8,8 +8,8 @@
 module.exports = {
 
 
-//connection:'MysqlProyecto',
-connection:'Heroku',
+connection:'MysqlProyecto',
+//connection:'Heroku',
 
   attributes: {
 

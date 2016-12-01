@@ -25,9 +25,22 @@ module.exports = {
      Entrenamiento.findOne(req.param('id'), function foundEntrenamiento(err, entrenamiento) {
         if (err) return next(err);
         if (!entrenamiento) return next();
+
+  Entrenamiento.query('select a.nombre, a.apellido ' +
+                    'from entrenamiento e ' +
+                    'inner join alumno a ' +
+                    'on a.id_entrenamiento=e.id where e.id=1;', function(err, alumnos) {
+          console.log(alumnos);
+      if (err) {
+        return res.serverError(err);
+      }
+
         res.view({
-          entrenamiento: entrenamiento
+          entrenamiento: entrenamiento,alumnos:alumnos
         });
+      });
+
+
      });
    },
 
