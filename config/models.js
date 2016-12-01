@@ -18,9 +18,9 @@ module.exports.models = {
   *                                                                          *
   ***************************************************************************/
   // connection: 'localDiskDb',
-  connection: 'MysqlProyecto',
+  //connection: 'MysqlProyecto',
   //connection: 'MysqlTarea',
-  //connection: 'Heroku',
+  connection: 'Heroku',
   
 
   /***************************************************************************
