@@ -20,7 +20,7 @@ module.exports = {
     });
   },
 
-/*  show: function (req, res, next) {
+ show: function (req, res, next) {
     Profesor.findOne(req.param('id')).populateAll().exec( function(err, profesor) {
       if (err) return next(err);
       if (!profesor) return next();
@@ -28,18 +28,7 @@ module.exports = {
         profesor: profesor
       });
     });
-  },*/
-
-
-show: function (req, res, next) {
-     Alumno.findOne(req.param('id'), function foundAlumno(err, alumno) {
-        if (err) return next(err);
-        if (!alumno) return next();
-        res.view({
-          alumno: alumno
-        });
-     });
-   },
+  },
 
 
 
